@@ -1,0 +1,190 @@
+.notice {
+  display: none;
+  visibility: hidden;
+}
+
+/* @media screen and (max-width: 500px), screen and (max-height: 501px) { */
+@media screen and (max-width: 900px) {
+  .wrapper {
+    display: none !important;
+  }
+  .notice {
+    display: block;
+    visibility: visible;
+  }
+}
+.col-3 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.know_more_desktop {
+  float: right;
+  color: #022446 !important;
+  font-family: "Inconsolata", monospace, "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.runway_image {
+  padding-left: 10px;
+}
+.runway_image_text {
+  float: right;
+  padding-top: 23px;
+  padding-right: 15px;
+  font-family: "Inconsolata", monospace, "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: bold;
+}
+.header_below_text {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.House_Designs_desktop {
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.distance_from_footer {
+  padding-bottom: 20px;
+}
+
+.lifestyles,
+.advantage,
+.access,
+.photo_block {
+  margin-top: 10px;
+}
+.button_area {
+  margin: 15px;
+}
+button {
+  border: none;
+}
+.button_text {
+  padding-bottom: 3px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #022446;
+  font-family: "Inconsolata", monospace, "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+.hr {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.House_Designs {
+  font-family: "Inconsolata", monospace, "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #022446;
+  font-weight: bold;
+}
+.know_more {
+  padding-left: 60%;
+  color: #022446 !important;
+  font-family: "Inconsolata", monospace, "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.mobile_image {
+  width: 100%;
+  height: auto;
+}
+span {
+  text-align: center;
+  font-family: "Inconsolata", monospace, "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+.span_mobile {
+  text-align: center;
+  font-family: "Inconsolata", monospace, "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+.contanier_text_desktop {
+  text-align: center;
+  font-weight: 700;
+}
+.contanier_text {
+  text-align: center;
+  font-weight: 550;
+}
+
+.button_dekstop {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.container_footer_distance {
+  margin-bottom: 10px;
+}
+.footer {
+  padding-top: 10px;
+}
+.footer_youtube_pinterest_icon {
+  text-align: center;
+  width: 100%;
+}
+.footer_blog_text_desktop {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Inconsolata", monospace, "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: white;
+  padding-bottom: 15px;
+}
+.footer_blog_text {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Inconsolata", monospace, "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: white;
+}
+
+.header_text {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Inconsolata", monospace, "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+.footer_youtube_pinterest_icon_desktop {
+  text-align: center;
+  width: 100%;
+  padding-left: 20px;
+  font-weight: bold;
+  font-family: "Inconsolata", monospace, "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: white;
+}
+.footer_enquiry_text_desktop {
+  float: right;
+  font-weight: bold;
+  font-family: "Inconsolata", monospace, "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: white;
+  padding-right: 20px;
+}
+.footer_desktop {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.sitemap {
+  padding-left: 20px;
+  padding: 15px;
+}

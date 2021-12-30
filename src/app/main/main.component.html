@@ -1,0 +1,9 @@
+ <div *ngIf="socialAuthServive.authState | async as socialUser">
+   <p>Hello, {{socialUser.name}}!</p>
+   <p>Your email: {{socialUser.email}}</p>
+   <button mat-raised-button (click)="mainlogout()">Logout</button>
+ </div>
+ <div>
+   <button (click)="userDetailsOnUserDetails()">Click Me</button>
+ </div>
+ <router-outlet></router-outlet>
