@@ -18,20 +18,30 @@ export class MainComponent implements OnInit {
     this.rout = router.url;
     console.log(this.rout);
   }
-  user = '1';
+
   ngOnInit(): void {
-    localStorage.setItem('SessionUser', this.user);
+    //this.checkResolution();
   }
+  registrationOnUserDetails() {}
 
-  onSubmit() {
-    this.router.navigateByUrl('/albums');
-    //  console.log('hi');
-  }
+  // onSubmit() {
+  //   this.router.navigateByUrl('/albums');
+  //   //  console.log('hi');
+  // }
+  // wrapperr: boolean | undefined;
 
+  // checkResolution() {
+  //   var txtwidth = screen.height.toString();
+  //   console.log(screen.height.toString());
+  //   console.log(screen.width.toString());
+  //   if (txtwidth > '600') return (this.wrapperr = true);
+  //   else;
+  //   return !this.wrapperr;
+  // }
   userDetailsOnUserDetails() {
     this.router.navigateByUrl('/userDetails');
   }
-  mainlogout() {
-    this.ud.logout();
-  }
+  // mainlogout() {
+  //   this.ud.logout();
+  // }
 }

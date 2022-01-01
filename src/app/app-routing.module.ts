@@ -6,14 +6,19 @@ import { AuthGuard } from './authgaurd.service';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: 'userDetails', component: UserDetailsComponent },
+  {
+    path: 'userDetails',
+    component: UserDetailsComponent,
+    canActivate: [AuthGuard],
+  },
   { path: 'login', component: LoginComponent },
   {
     path: 'main',
     component: MainComponent,
-    canActivate: [],
+    canActivate: [AuthGuard],
   }, // only accessible if authorised
   { path: '**', component: LoginComponent },
+  // { path: '', redirectTo: '/login', pathMatch: 'full' },
 ];
 
 @NgModule({

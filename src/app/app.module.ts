@@ -1,3 +1,4 @@
+import { CommonServiceService } from 'src/app/common-service.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { GoogleLoginProvider, SocialAuthService } from 'angularx-social-login';
@@ -30,6 +31,7 @@ import { FooterComponent } from './layout/footer/footer.component';
   ],
   providers: [
     SocialAuthService,
+    CommonServiceService,
     {
       provide: 'SocialAuthServiceConfig',
       useValue: {

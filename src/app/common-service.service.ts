@@ -18,7 +18,15 @@ export class CommonServiceService {
     public socialAuthServive: SocialAuthService
   ) {}
 
+  async gettoken() {
+    await new Promise((f) => setTimeout(f, 1000));
+    // console.log('get token is getting called');
+    // console.log(localStorage.getItem('SessionUser'));
+    return localStorage.getItem('SessionUser');
+  }
+
   getUserDetailsService() {
+    console.log(localStorage.getItem('SessionUser'));
     return this.http.get(this.userDetails);
   }
   postUserdeatilsService() {
