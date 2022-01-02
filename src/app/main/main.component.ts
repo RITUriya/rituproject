@@ -29,9 +29,9 @@ export class MainComponent implements OnInit {
   //   center: { lat: 25.5941, lng: 25.5941 }, //{ lat: 38.9987208, lng: -77.2538699 },
   //   zoom: 14,
   // };
-  // marker = {
-  //   position: { lat: 25.5941, lng: 85.1376 }, // { lat: 38.9987208, lng: -77.2538699 },
-  // };
+  marker = {
+    position: { lat: 25.5941, lng: 85.1376 }, // { lat: 38.9987208, lng: -77.2538699 },
+  };
 
   rout: string;
   constructor(
