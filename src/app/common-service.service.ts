@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { SocialAuthService } from 'angularx-social-login';
+import { SocialAuthService, SocialUser } from 'angularx-social-login';
 
 @Injectable({
   providedIn: 'root',
@@ -17,16 +17,27 @@ export class CommonServiceService {
     private router: Router,
     public socialAuthServive: SocialAuthService
   ) {}
-
+  isLoggedIn() {
+    this.socialAuthServive.authState.subscribe((data) => data);
+  }
+  loginData: any;
+  userDetail = 1;
   async gettoken() {
     await new Promise((f) => setTimeout(f, 1000));
-    // console.log('get token is getting called');
-    // console.log(localStorage.getItem('SessionUser'));
-    return localStorage.getItem('SessionUser');
+    this.socialAuthServive.authState.subscribe((data) => {
+      this.loginData = data;
+    });
+    console.log(this.loginData);
+    if (this.loginData != null && this.loginData != 'undefined') {
+      await new Promise((f) => setTimeout(f, 1000));
+      console.log(this.userDetail);
+      return this.userDetail;
+    }
+    return;
   }
 
   getUserDetailsService() {
-    console.log(localStorage.getItem('SessionUser'));
+    // console.log(localStorage.getItem('SessionUser'));
     return this.http.get(this.userDetails);
   }
   postUserdeatilsService() {

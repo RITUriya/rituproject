@@ -1,5 +1,7 @@
 import { CommonServiceService } from 'src/app/common-service.service';
 import { NgModule } from '@angular/core';
+
+import { GoogleMapsModule } from '@angular/google-maps';
 import { BrowserModule } from '@angular/platform-browser';
 import { GoogleLoginProvider, SocialAuthService } from 'angularx-social-login';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +14,17 @@ import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { I18nModule } from './i18n/i18n.module';
+import {
+  TranslateCacheModule,
+  TranslateCacheSettings,
+  TranslateCacheService,
+} from 'ngx-translate-cache';
+
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { CompAComponent } from './comp-a/comp-a.component';
+import { CompBComponent } from './comp-b/comp-b.component';
+import { SelectLanguageComponent } from './select-language/select-language.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +34,9 @@ import { FooterComponent } from './layout/footer/footer.component';
     UserDetailsComponent,
     HeaderComponent,
     FooterComponent,
+    CompAComponent,
+    CompBComponent,
+    SelectLanguageComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +44,24 @@ import { FooterComponent } from './layout/footer/footer.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
+    GoogleMapsModule,
+    I18nModule,
+    TranslateModule.forRoot(),
+    TranslateCacheModule.forRoot({
+      cacheService: {
+        provide: TranslateCacheService,
+        useFactory: (
+          translateService: TranslateService,
+          translateCacheSettings: TranslateCacheSettings
+        ) => {
+          return new TranslateCacheService(
+            translateService,
+            translateCacheSettings
+          );
+        },
+        deps: [TranslateService, TranslateCacheSettings],
+      },
+    }),
   ],
   providers: [
     SocialAuthService,

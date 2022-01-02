@@ -1,20 +1,27 @@
-<div class="img-wrapper">
+<div class="img-wrapper ">
   <div class="img-overlay">
-    <div>
-      <button mat-raised-button class="button_dekstop button_text text-white"
+    <div class="flex-container">
+      <div class="my-google-map">
+        <google-map height="300px" width="500px" [center]="center" [zoom]="zoom" [options]="options">
+          <map-marker *ngFor="let markerPosition of markerPositions" [position]="markerPosition"
+            [options]="markerOptions"></map-marker>
+        </google-map>
+      </div>
+      <button mat-raised-button class="button_dekstop button_text text-white main_button"
         (click)="registrationOnUserDetails()">Click
         Me
         for registration</button>
 
-      <button mat-raised-button class="button_dekstop button_text text-white" (click)="userDetailsOnUserDetails()">Click
+      <button mat-raised-button class="button_dekstop button_text text-white main_button"
+        (click)="userDetailsOnUserDetails()">Click
         Me
-        for User Details</button></div>
+        for User Details</button>
+    </div>
     <ng-template #noticee>
       <button mat-raised-button class="button_dekstop button_text text-white"
         (click)="registrationOnUserDetails()">Click
         Me
         for registration</button>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <div><button mat-raised-button class="button_dekstop button_text text-white"
           (click)="userDetailsOnUserDetails()">Click
           Me

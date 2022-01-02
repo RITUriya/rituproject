@@ -2,7 +2,8 @@
   <div style="background-color:#d30e0ef0">
     <img class="runway_image" src="assets/images/3.png">
     <span *ngIf="socialAuthServive.authState | async as socialUser ; else engquireyText">
-      <span class="header_text"> Hello, {{socialUser.name}}! Your email: {{socialUser.email}}
+      <span class="header_text"> Hello, {{socialUser.name}}! Your email:
+        {{socialUser.email}}
         <button mat-raised-button class="logout_button button_text text-white" (click)="mainlogout()">Logout</button>
       </span></span>
     <ng-template #engquireyText><span class="contanier_text header_text">For all enquires , please call 1800 000

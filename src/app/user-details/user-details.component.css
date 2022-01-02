@@ -6,3 +6,14 @@ th {
   padding-right: 24px;
   text-align: center;
 }
+
+.mat-elevation-z8 {
+  background-color: violet;
+  text-align: center;
+  font-family: cursive;
+  font-style: italic;
+  font-size: 10px;
+}
+/* .userdetails {
+
+} */

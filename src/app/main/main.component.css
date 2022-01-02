@@ -22,3 +22,8 @@
   /* adjust 'height' to position overlay content vertically */
   height: 50%;
 }
+
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+}
